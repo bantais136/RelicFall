@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Community page for RelicFall [Dungeon] with issue tracking and player feedback."
+    />
+    <title>RelicFall [Dungeon] | Community Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-badge">RF</span>
+          <span>RelicFall [Dungeon]</span>
+        </div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#issues">Issues</a>
+          <a href="#submit">Submit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Community Feedback Hub</p>
+            <h1>Explore the depths of RelicFall with your fellow adventurers.</h1>
+            <p class="subtitle">
+              Report bugs, suggest new dungeons and features, and help shape the ultimate dungeon-crawling experience.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="#submit">Submit feedback</a>
+              <a class="button secondary" href="#issues">View open issues</a>
+            </div>
+            <ul class="stats">
+              <li><strong id="issue-count">0</strong><span>Open issues</span></li>
+              <li><strong>Daily</strong><span>Updates</span></li>
+              <li><strong>Player-led</strong><span>Feedback</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-card">
+            <div class="card-top">
+              <span class="status-dot"></span>
+              <span>Live community board</span>
+            </div>
+            <h2>Latest feedback</h2>
+            <div class="mini-list">
+              <div>
+                <span class="tag bug">Bug</span>
+                <p>Boss mechanics not working properly.</p>
+              </div>
+              <div>
+                <span class="tag feature">Feature</span>
+                <p>New dungeon levels and treasure loot tables.</p>
+              </div>
+              <div>
+                <span class="tag idea">Idea</span>
+                <p>Multiplayer co-op dungeon raids.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="info">
+        <div class="container two-col">
+          <div>
+            <p class="section-tag">About RelicFall</p>
+            <h2>Everything your adventurers need to help shape the game.</h2>
+          </div>
+          <div>
+            <p>
+              This page acts as a public feedback hub for RelicFall [Dungeon]. Players can browse open issues,
+              report bugs, and suggest new features directly through GitHub.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="issues" class="issues-section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-tag">Issue tracker</p>
+              <h2>Recent community reports</h2>
+            </div>
+            <a class="button secondary small" href="https://github.com/bantais136/roblox-game-site/issues" target="_blank" rel="noreferrer">
+              Open on GitHub
+            </a>
+          </div>
+
+          <div id="issues-list" class="issues-list" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="submit" class="submit-section">
+        <div class="container form-wrap">
+          <div class="section-header left">
+            <div>
+              <p class="section-tag">Submit feedback</p>
+              <h2>Share a bug, idea, or question</h2>
+            </div>
+          </div>
+
+          <form id="feedback-form" class="feedback-form">
+            <div class="field-row">
+              <label>
+                Name
+                <input type="text" id="reporter" name="reporter" placeholder="Player name" />
+              </label>
+              <label>
+                Type
+                <select id="type" name="type">
+                  <option value="bug">Bug</option>
+                  <option value="feature">Feature request</option>
+                  <option value="idea">Idea</option>
+                  <option value="question">Question</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Title
+              <input type="text" id="title" name="title" placeholder="Short summary of the issue" required />
+            </label>
+
+            <label>
+              Details
+              <textarea id="description" name="description" rows="6" placeholder="Tell us what happened, what you expected, and any steps to reproduce." required></textarea>
+            </label>
+
+            <div class="field-row">
+              <label>
+                Game version
+                <input type="text" id="version" name="version" placeholder="Example: v1.4.2" />
+              </label>
+              <label>
+                Platform
+                <select id="platform" name="platform">
+                  <option value="PC">PC</option>
+                  <option value="Mobile">Mobile</option>
+                  <option value="Console">Console</option>
+                  <option value="Unknown">Unknown</option>
+                </select>
+              </label>
+            </div>
+
+            <button class="button primary" type="submit">Open issue form</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 RelicFall [Dungeon]</p>
+        <a href="https://github.com/bantais136/roblox-game-site/issues" target="_blank" rel="noreferrer">GitHub Issues</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
